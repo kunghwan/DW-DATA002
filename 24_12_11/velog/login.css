@@ -1,0 +1,39 @@
+form.login{
+    border: 1px solid;
+}
+form.login div.e{
+    border: 2px solid red;
+    display: flex;
+    flex-direction: column;
+    row-gap: 5px ;
+}
+form.login div.e{
+    font-size: 12px;
+    cursor: pointer; 
+}
+
+form.login div.e div{
+    background: whitesmoke;
+    display: flex;
+ 
+}
+form.login div.e div input{
+  outline: none;
+  border: 1px solid lightgray;
+  border-right: 0 ;
+  padding-left: 10px;
+}
+form.login div.e div button{
+ height: 40px;
+ padding: 0 20px;
+ background-color: #16ba88;
+ border: none;
+ color: white;
+ cursor: pointer;
+}
+form.login div.e div input:focus{
+    border-color:#16ba88 ;
+}
+form.login div.e div button:hover{
+    opacity: 0.8;
+}

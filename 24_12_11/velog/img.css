@@ -1,0 +1,9 @@
+.img{
+    display: flex;
+    align-items: center;
+    height: 200px;
+    border: 1px solid;
+}
+.img div{
+    background-color: whitesmoke;
+}
