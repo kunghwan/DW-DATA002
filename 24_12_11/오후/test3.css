@@ -2,4 +2,44 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+    list-style-type: none;
 }
+.main{
+    background: blue;
+    height: 300px;
+}
+.A{
+    display: flex;
+    height: 300px;
+    align-items: end;
+    justify-content: center;
+    text-align: center; 
+}
+.imgBox{
+    display: flex;
+    align-items: end;
+}
+.a, .b, .c{
+    width: 100px;
+    height: 100px;
+    padding-top: 40px;
+}
+.a{
+    background: red;
+}
+.b{
+    background: gray;
+}
+.c{
+    background: brown;
+}
+.imgBox img{
+     display: block; 
+     /* img태그를 블록태그로 전환 */
+
+}
+   
+  
+  
+
+    

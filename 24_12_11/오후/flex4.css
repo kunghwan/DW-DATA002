@@ -1,0 +1,34 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+#header{
+    display: flex;
+   
+} 
+.main1{
+    background: darkblue;
+    width: 200px;
+    height: 600px;
+    padding: 30px 0px; 
+}
+div.a{
+    color: white;
+    display: flex; 
+    justify-content: center;
+    padding: 10px 0px; 
+} 
+.main2{
+    background: brown;
+    height: 600px;
+    width: calc(100vw - 200px);
+}
+
+    
+    
+    
+    
+   
+    
+    
