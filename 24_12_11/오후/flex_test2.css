@@ -1,0 +1,40 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+#menu1{
+    width: 800px;
+    padding: 20px;
+    border: 1px solid black;
+}
+ul{
+    list-style-type: none;
+}
+.menu{
+    display: flex;
+    justify-content: space-between;
+    
+}
+.menu_item{
+    padding: 20px 30px;
+    background: burlywood;
+}
+#menu2{
+    border: 1px solid red;
+    width: 600px;
+    padding: 15px;
+    height: 100px;
+    display: flex;
+    column-gap: 15px;
+    align-items: start;
+}
+.item{
+    padding: 15px 40px;
+    background: yellow;
+}
+.login, .signUp{
+    align-self: end;
+    background: brown;
+    
+}
