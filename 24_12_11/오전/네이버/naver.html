@@ -5,11 +5,12 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>네이버</title>
     <link rel="stylesheet" href="naver.css">
+    <script src="index.js"></script>
 </head>
 <body>
     <div class="header">
        <p>네이버를 더 안전하고 편리하게 이용하세요</p>
-       <div><button class="green"><span class="naver">NAVER </span>로그인</button></div>
+       <div><button class="green" onclick="show()"><span class="naver">NAVER </span>로그인</button></div>
        <div>
         <ul>
             <li><button class="b">아이디 찾기</button></li>
@@ -18,20 +19,21 @@
         </ul>
        </div>
     </div>
-    <div class="header2">
+    <div class="header2" id="modal">
+        <button onclick="hide">X</button>
         <div>
-          <form>
+          <form action="" class="header3">
             <div class="A">
                     <input type="text" placeholder="아이디 또는 비밀번호" >
                     <input type="text" placeholder="비밀번호">
             </div>
-               <div>
-                    <button><span>V</span>로그인상태유지</button>
-                    <button>로그인</button>
-               </div>
+               <div class="check">
+                    <input type="checkbox" id="keep"><label for="keep" class="naver">로그인 상태유지</label>
+                </div>
+                <button>로그인</button>
             </div>
           </form>
-       <ul>
+       <ul class="btns">
         <li><button>아이디 찾기</button></li>
         <li><button>비밀번호 찾기</button></li>
         <li><button>회원가입</button></li>
