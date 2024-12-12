@@ -89,7 +89,33 @@ img{
 }
 
 #header .nav .sub_menu_list{
-    display: none;
+    /* display: none; */
+    position: absolute;
+    width: 100%;
+    background: #eee;
+    left: 0px;
+    padding: 50px 0;
+    z-index: 2; 
+    opacity: 0; 
+}
+    /* display: none; 화면을 안보이게 하는 경우 투명도 0,높이0으로줄때*/
+#header .nav .menu_list:hover ~ .sub_menu_list{
+    opacity: 1;
+}    
+    /* hover 통제할수 있는거 자기 자신이거나 하위태그 부모는 안됨 ~는 형제태그 의미*/
+
+#header .nav .sub_menu_list .sub_menu{
+    width: 1200px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-evenly;
+    flex-wrap: wrap;
+    /* 자식들이 커야 여러줄 배치가 됨 */
+}
+#header .nav .sub_menu_list .sub_menu .sub{
+    width: 20%;
+    text-align: center;
+    padding: 20px 0;
 }
 #main{
   display: flex;
