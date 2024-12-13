@@ -128,13 +128,22 @@
   }
   #main .img_box .big{
     position: absolute;
-    z-index:1000;
+    z-index:-10;
     width: 600px;
     top: 50%; left: 50%;
-    box-shadow: inset 0px 0px 10px 15px rgb(0,0,0,0.5);
-    mask-image: linear-gradient(to bottom, rgba(0,0,0,1) 10%, rgba(0,0,0,0) 100%);
+    /* box-shadow: inset 0px 0px 10px 15px rgb(0,0,0,0.5);
+    mask-image: linear-gradient(to bottom, rgba(0,0,0,1) 10%, rgba(0,0,0,0) 100%); */
     /* 그라데이션 종류 */
+    mask-image: radial-gradient(circle, rgba(0,0,0,1) 80%, rgb(0,0,0,0) 100%);
+    /* 방사형 */
+    opacity: 0;
   }
-  
+  #main .img_box:hover .big{
+    opacity: 1;
+    z-index: 100;
+    /* 사진 아래만 클릭할떄 보이는 이유 위에 자리를 차지하고있고 투명도로 차지하고있어서? */
+  }
+
+
   
   
