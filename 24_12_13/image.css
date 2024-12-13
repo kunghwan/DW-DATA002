@@ -46,6 +46,7 @@
     /* 한줄표시 */
     text-overflow: ellipsis;
     /* 글자 오버된거 점으로 표시해라 */
+    /* text overflow만 있으면 줄 다튀어나옴 제한을 주는 명령어 2줄 3줄  */
 }
 .card_wrap{
     overflow: hidden;
