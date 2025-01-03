@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="ko">
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
@@ -14,7 +14,7 @@
       // let name = "이순신";
       // let은 한번 지정한 변수는 다시는 선언하지 못한다(let못붙임) 데이터 변경은 가능
       name = "김유신";
-      var num = 1000;
+      var num = 1100;
       // var는 또다시 변수를 만들수있다
       //  num에 10이 저장
 
@@ -23,7 +23,40 @@
           const -> 재선언 불가 , 데이터 변경 불가
           let -> 재선언 불가, 데이터 변경 가능
           var -> 재선언 가능, 데이터 변경 가능
-          */
+          변수는 하나의 데이터만 가짐
+
+      */
+
+      num = 12 + 90;
+      a = 6;
+      b = 10;
+      num = a + b;
+      num = num + 70;
+
+      var width = 20;
+      var height = 50;
+      // 사각형의 너비와 높잉이다. 넓이는 ?
+      var 넓이 = width * height;
+      //  자바스크립트 출력 - console.log()
+      var apple = 12;
+      var banana = 23;
+      var orange = 56;
+      var sum = apple + banana + orange;
+      console.log("과일의 총 갯수 :" + sum);
+      // 무조건 console은 뒤로 와야함
+
+      //   사과와 바나나, 오렌지의 총갯수는???
+
+      var item = "마우스 g340";
+      var among = 7;
+      var cost = 43000;
+      // 7명의 학생들이게 마우스를 선물하기 위해 주문했다.
+      // 총 결제 금액은 얼마인가
+      var mouse = cost * among;
+      console.log(item + " 결제금액 : " + mouse);
+
+      키 >= 130;
+      키 < 130;
     </script>
   </head>
   <body></body>
