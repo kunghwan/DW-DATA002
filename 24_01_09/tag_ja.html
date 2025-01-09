@@ -48,12 +48,15 @@
           // 접근이 가능하다
 
           var str = "";
-          for (var i = 0; i < text_list.length; i++) {}
+          for (var i = 0; i < text_list.length; i++) {
+            str += text_list[i] + "<br>";
+          }
           // 반복횟수가 정해진거는 for문이 좋다
           //
 
-          list.innerText = text_list;
-          // innerText는 기존에있던걸 날리고 새로운 텍스트를 넣어준다
+          list.innerHTML = str;
+
+          // innerText는 기존에있던걸 날리고 새로운 텍스트를 넣어준다 오직 문자열로만 작성 그래서 innerHTML로해야함
           //   alert(text);
           //   var a = "가,나,다,라,마";
           //   let b = a.split(","); //split 지정된 문자열을 이용해서 짤라서 배열으로 만들어줌
