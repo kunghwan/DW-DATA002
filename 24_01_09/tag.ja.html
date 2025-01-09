@@ -6,21 +6,70 @@
     <title>Document</title>
 
     <script>
+      // 함수안에 배열을 만드면 함수가 끝나면 배열도 끝난다 그래서 함수밖에 배열만듬
+      // 함수안에 있는 변수는 지역변수이다
+
+      // 전역 변수 = 특정영역에 귀속 되지않은 변수
+      //    - 어느 영역 (모든함수,제어문)에서나 사용가능 변수
+      //    - 브라우저를 종료하거나 페이지가 바뀌면 사라지는 변수 **전역변수가 많으면 페이지 로딩느려짐 메모리를 많이차지햇
+      // 지역변수 - 함수,메서드 외같은 특정 영역 안에서 선언된 변수
+      //    - 선언된 영역안에서만 사용 가능
+      //    - 함수나 메서드 종료시 지역변수도 종료됨
+
+      const text_list = new Array();
+      //   const text_list = [];
+
       window.onload = function () {
         //이름이 없는 익명함수이다
+
+        // 태그에 이벤트 등록과 처리방법
+        // 1. 태그 선택
+
         var bt = document.getElementById("enrollment");
         console.log(bt);
+        // 2. 이벤트 등록 - 이벤트 등록을 해야 기능이 동작된다.
+        //  이벤트는 현재 문서객체에 등록 한다.
+        // 이미 모든 이벤트에 on이 붙어있어서 on안붙여도됨
+        // document.addEventListener("click", bt);
+        // 태그객체.addEventListener('이벤트명',처리함수)
+        bt.addEventListener("click", function () {
+          // 3. 버튼을 클릭하면 동작할 내용 작성
+          //   alert("버튼 클릭 했다");
+          // 버튼을 클릭하면 input태그 안의 텍스트를
+          // 목록 아래에 출력하기
+          var box = document.getElementById("box");
+          // input안에 글자 넣어주면 클릭했을떄 내가 친 글자가 나옴
+          var text = box.value;
+          var list = document.getElementById("list");
+          text_list.push(text);
+          // 배열은 연속적인 공간으로 이루어져있기에 인덱스라는
+          // 번호를 가지고 있다. 인덱스는 0부터 시작한다.
+          // 즉, 안덱스를 이용하면 첫번째데이터 부터 순차적으로
+          // 접근이 가능하다
+
+          var str = "";
+          for (var i = 0; i < text_list.length; i++) {}
+          // 반복횟수가 정해진거는 for문이 좋다
+          //
+
+          list.innerText = text_list;
+          // innerText는 기존에있던걸 날리고 새로운 텍스트를 넣어준다
+          //   alert(text);
+          //   var a = "가,나,다,라,마";
+          //   let b = a.split(","); //split 지정된 문자열을 이용해서 짤라서 배열으로 만들어줌
+          //   alert(b[1]);
+        });
       };
     </script>
   </head>
   <body>
     <div>
-      <input type="text" />
+      <input type="text" id="box" value="하하하" />
       <button id="enrollment">등록</button>
     </div>
     <div>
       <h3>목록</h3>
-      <div></div>
+      <div id="list"></div>
     </div>
   </body>
 </html>
@@ -36,3 +85,5 @@
 
 
 -->
+<!-- 객체 key와value로 구성 key는 중복안되고 value는 중복될수있다 -->
+<!--  -->
