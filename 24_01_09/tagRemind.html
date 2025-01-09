@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <script>
+      var text_list = [];
+      window.onload = function () {
+        var btn = document.getElementById("btn");
+        console.log(btn);
+        btn.addEventListener("click", function () {
+          var input = document.getElementById("input");
+          var text = input.value;
+          var list = document.getElementById("list");
+          text_list.push(text);
+
+          var str = "";
+          for (var i = 0; i < text_list.length; i++) {
+            str += text_list[i] + "<br>";
+          }
+
+          list.innerHTML = str;
+        });
+      };
+    </script>
+  </head>
+  <body>
+    <div>
+      <input type="text" value="" id="input" />
+      <button id="btn">등록</button>
+    </div>
+    <div>
+      <h3>목록</h3>
+      <div id="list"></div>
+    </div>
+  </body>
+</html>

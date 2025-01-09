@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <script>
+      window.onload = function () {
+        var save = document.getElementsByClassName("save");
+        console.log(save[0]);
+        save[0].addEventListener("click", save_name);
+      };
+      var save_name = () => {
+        var name = document.getElementsByClassName("name");
+        var text = name[0].value;
+        var list1 = document.getElementsByClassName("list1");
+        list1[0].innerText = text;
+      };
+    </script>
+  </head>
+  <body>
+    <div>
+      이름 : <input type="text" class="name" value="" />
+      <button class="save">저장</button>
+    </div>
+    <h3>명단</h3>
+    <ul class="list">
+      <li class="list1"></li>
+    </ul>
+  </body>
+</html>
