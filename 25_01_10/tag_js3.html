@@ -4,6 +4,34 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Document</title>
+    <script>
+      window.onload = function () {
+        var btn = document.getElementById("change");
+        btn.addEventListener("click", text_change);
+      };
+      var text_change = function () {
+        //  1. 자식 태그 찾아서 변경하기
+        const parent = document.getElementById("wrap");
+        const first = parent.children[0];
+        // parent.firstChild;
+        first.textContent = "결혼한자식";
+        // first.innerText='결혼한 자식'
+        const last = parent.children[2];
+        //  last child를 넣으면 안되는 이유 엔터를 쳐서 그럼 엔터도 자식으로 취급하기 때문에
+        last.textContent = "15600";
+
+        // 2. 버튼의 형재 태그로서 찾기
+        // const parent1 = this.previousElementSibling;
+        // parent1.children[0].textContent = "결혼한 자식";
+        // parent1.children[2].textContent = 15600;
+
+        // 3. 형제로 찾기
+        // const brother = document.getElementsByClassName("first_child")[0];
+        // brother.textContent = "결혼한 자식";
+        // const brother3 = brother.nextElementSibling.nextElementSibling;
+        // brother3.textContent = 15600;
+      };
+    </script>
   </head>
   <body>
     <div id="wrap">
@@ -12,10 +40,10 @@
       <div>1054</div>
     </div>
     <button id="change">변경</button>
+  </body>
+</html>
 
-    <!-- 변경 버튼을 클릭하면 첫번째 자식의 텍스트를 결혼한 자식으로 변경
+<!-- 변경 버튼을 클릭하면 첫번째 자식의 텍스트를 결혼한 자식으로 변경
     1054를 15600으로 변경 되게 하세요. 
     
     -->
-  </body>
-</html>
