@@ -15,13 +15,22 @@
       function save_name() {
         var input = document.getElementsByClassName("name");
         var text = input[0].value;
-        var li = document.getElementsByClassName("list1");
-        li[0].innerText = text;
+        // var li = document.getElementsByClassName("list1");
+        // li[0].innerText = text;
         // document.getElementsByTagNameNS
         // document.getElementsByTagName
         // document.getElementsByName
+        var li = document.createElement("li");
+        li.textContent = text;
+        var ul = document.getElementsByClassName("list");
+        ul[0].appendChild(li);
+        // appendChild는 자식으로 넣어주는거  ul가 li를
 
-        // document.createElement('div');
+        // 스크립트로 생성한 태그에 텍스트 넣는법
+        // 1. 태그객체.textContent
+        // 2. 텍스트노드를 생성하여 추가
+        // var t = document.createTextNode("넣고자 하는 텍스트");
+        // li.appendChild(t);
       }
     </script>
   </head>
