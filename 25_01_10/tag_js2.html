@@ -26,6 +26,10 @@
         li.setAttribute("class", "list");
         var ul = document.getElementById("bucket_list");
         ul.appendChild(li);
+
+        // input 태그의 내용 삭제하고 커서 표시하기
+        input.value = ""; //input 내용 삭제
+        input.focus(); //input 태그에 커서 표시
       }
 
       function delete_list() {
