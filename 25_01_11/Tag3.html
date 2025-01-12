@@ -1,0 +1,44 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>복습2</title>
+    <script>
+      window.onload = function () {
+        var change = document.getElementById("change");
+        change.addEventListener("click", text_change);
+      };
+
+      function text_change() {
+        // const parent = document.getElementById("wrap");
+        // const first = parent.children[0];
+        // first.textContent = "결혼할 자식";
+        // const last = parent.children[2];
+        // last.textContent = 15600;
+
+        // const parent = this.previousElementSibling;
+        // parent.children[0].textContent = "결혼할 자식";
+        // parent.children[2].textContent = 15600;
+
+        const brother = document.getElementsByClassName("first_child")[0];
+        brother.textContent = "결혼할 자식";
+        const brother3 = brother.nextElementSibling.nextElementSibling;
+        brother3.textContent = 15600;
+      }
+    </script>
+  </head>
+  <body>
+    <div id="wrap">
+      <div class="first_child">첫번째 자식</div>
+      <div class="child list">두번째 자식</div>
+      <div>1054</div>
+    </div>
+    <button id="change">변경</button>
+  </body>
+</html>
+
+<!-- 변경 버튼을 클릭하면 첫번째 자식의 텍스트를 결혼한 자식으로 변경
+    1054를 15600으로 변경 되게 하세요. 
+    
+    -->

@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
@@ -15,15 +15,15 @@
       function save_name() {
         var input = document.getElementsByClassName("name");
         var text = input[0].value;
-        // var li = document.getElementsByClassName("list1");
-        // li[0].innerText = text;
+        var li = document.getElementsByClassName("list1");
+        li[0].innerText = text;
         // document.getElementsByTagNameNS
         // document.getElementsByTagName
         // document.getElementsByName
-        var li = document.createElement("li");
-        li.textContent = text;
-        var ul = document.getElementsByClassName("list");
-        ul[0].appendChild(li);
+        // var li = document.createElement("li");
+        // li.textContent = text;
+        // var ul = document.getElementsByClassName("list");
+        // ul[0].appendChild(li);
         // appendChild는 자식으로 넣어주는거  ul가 li를
 
         // 스크립트로 생성한 태그에 텍스트 넣는법

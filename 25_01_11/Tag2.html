@@ -1,0 +1,47 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="stylesheet" href="Tag2.css" />
+    <script>
+      window.onload = function () {
+        var btn = document.getElementById("reg");
+        btn.addEventListener("click", reg_list);
+      };
+
+      function reg_list() {
+        var input = document.getElementById("my");
+        var text = input.value;
+        var li = document.createElement("li");
+        li.textContent = text;
+
+        var del = document.createElement("button");
+        del.textContent = "삭제";
+        del.addEventListener("click", del_list);
+        li.appendChild(del);
+
+        li.setAttribute("class", "list");
+        var ul = document.getElementById("bucket_list");
+        ul.appendChild(li);
+      }
+
+      function del_list() {
+        let parent = this.parentElement;
+        parent.remove();
+      }
+    </script>
+  </head>
+  <body>
+    <div>
+      <span>버킷리스트</span>
+      <input type="text" id="my" value="" />
+      <button id="reg">등록</button>
+    </div>
+    <hr />
+    <ul id="bucket_list">
+      <li class="list">베네치아 가기</li>
+    </ul>
+  </body>
+</html>
